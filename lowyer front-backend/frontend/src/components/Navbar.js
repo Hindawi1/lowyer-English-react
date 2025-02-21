@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png"; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,18 +19,28 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="burger-icon" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+      <div className={`navbar-container ${isMenuOpen ? "menu-open" : ""}`}>
+        {/* Logo */}
+        <div className="logo">
+          <img src={logo} alt="Logo" />
+        </div>
+
+        {/* Burger Menu */}
+        <div className="burger-icon" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+
+        {/* Navbar Links */}
+        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+          <li><Link to="/" onClick={() => scrollToSection("hero")}>الرئيسية</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("about")}>من نحن</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("services")}>خدماتنا</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("contact")}>تواصل معنا</Link></li>
+          <li><Link to="/" className="consult-btn" onClick={() => scrollToSection("contact")}>اطلب استشارة فورية</Link></li>
+        </ul>
       </div>
-      <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
-        <li><Link to="/" onClick={() => scrollToSection("hero")}>الرئيسية</Link></li>
-        <li><Link to="/" onClick={() => scrollToSection("about")}>من نحن</Link></li>
-        <li><Link to="/" onClick={() => scrollToSection("services")}>خدماتنا</Link></li>
-        <li><Link to="/" onClick={() => scrollToSection("contact")}>تواصل معنا</Link></li>
-        <li><Link to="/" className="consult-btn" onClick={() => scrollToSection("contact")}>اطلب استشارة فورية</Link></li>
-      </ul>
     </nav>
   );
 };

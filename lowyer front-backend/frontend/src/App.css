@@ -9,9 +9,9 @@
 
 /* General Body Styles */
 body {
-  font-family: 'Zain', sans-serif; /* Apply Zain font */
-  background-color: #e9e9e9; /* Dark background */
-  color: #D4AF37; /* Primary gold text */
+  font-family: 'Zain', sans-serif; 
+  background-color: #e9e9e9; 
+  color: #D4AF37; 
   padding-top: 4rem;
   margin: 0;
   padding: 0;
@@ -24,13 +24,45 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #e9e9e9; /* Light beige background */
+  background-color: #e9e9e9; 
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   display: flex;
-  justify-content: center; /* Center navbar items on normal screens */
+  justify-content: center; 
   align-items: center;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 0px; 
+}
+
+/* navbar logo*/
+.logo img {
+  height: 45px; 
+  width: 145px;
+  margin: 0px; 
+}
+
+/* navbar logo responsive styles*/
+@media (max-width: 768px) {
+  .navbar-container.menu-open {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar-links {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Navbar links */
@@ -48,19 +80,19 @@ body {
 
 .navbar-links a {
   text-decoration: none;
-  color: #3C4043; /* Dark gray text */
+  color: #3C4043; 
   font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #000000; /* Primary gold on hover */
+  color: #000000; 
 }
 
 .consult-btn {
-  background-color: #3C4043; /* Dark gray button */
-  color: #FFFFFF; /* White text */
+  background-color: #3C4043; 
+  color: #FFFFFF;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
@@ -68,7 +100,7 @@ body {
 }
 
 .consult-btn:hover {
-  background-color: #e1c772; /* Primary gold on hover */
+  background-color: #e1c772; 
 }
 
 /* Burger menu styles */
@@ -81,7 +113,7 @@ body {
   justify-content: space-between;
   position: absolute;
   top: 1rem;
-  right: 1rem; /* Align to the right on small screens */
+  right: 1rem; 
 }
 
 .bar {
@@ -96,7 +128,7 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust to place below navbar */
+    top: 60px; 
     left: 0;
     width: 100%;
     background-color: #e9e9e9;
@@ -121,37 +153,37 @@ body {
 /* Hero Section */
 
 .hero {
-  height: 100vh; /* Full viewport height */
-  width: 100%; /* Full width */
+  height: 100vh; 
+  width: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0;
   position: relative;
-  background-image: url('./assets/images/heroBackground.png'); /* Ensure this path is correct */
-  background-size: 100% 100%; /* Stretch to cover both width and height */
-  background-position: center center; /* Keeps the image centered */
-  background-repeat: no-repeat; /* Prevents repeating of the image */
-  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-image: url('./assets/images/heroBackground.png'); 
+  background-size: 100% 100%; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
 .hero::before {
-  content: ''; /* Empty content to create a new layer */
+  content: ''; 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Adding a semi-transparent dark layer */
-  z-index: 1; /* Make sure it's behind the text */
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
 }
 
 .hero-content {
   color: #fff;
   padding: 0 2rem;
   text-align: center;
-  z-index: 2; /* Make sure the text is above the overlay */
+  z-index: 2; 
 }
 
 .hero-title {
@@ -169,8 +201,9 @@ body {
 }
 
 .hero-btn {
-  background-color: #e1c772cd; /* Primary gold button */
-  color: #fff; /* White text */
+  background-color: #e1c772cd; 
+  color: #fff; 
+  border-color: #e1c772cd;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
   font-size: 1.3rem;
@@ -179,26 +212,26 @@ body {
 }
 
 .hero-btn:hover {
-  background-color: #C9A227; /* Secondary gold on hover */
+  background-color: #C9A227; 
 }
 
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5rem; /* Adjust title size for mobile */
+    font-size: 2.5rem; 
   }
 
   .hero p {
-    font-size: 1rem; /* Adjust paragraph text for mobile */
+    font-size: 1rem; 
   }
 
   .hero-btn {
-    font-size: 1.1rem; /* Adjust button size for mobile */
+    font-size: 1.1rem; 
   }
 }
 
 /* Services Section */
-/* خدماتنا */
+
 #services {
   padding: 50px 0;
   background-color: #090808;
@@ -257,6 +290,7 @@ body {
   font-size: 40px; 
 }
 
+/*follow up section*/
 #client-followup {
   padding: 50px;
   background-color: #090808;
@@ -350,54 +384,54 @@ body {
 /* Contact Us Section */
 #contact {
   padding: 3rem 1rem;
-  background-color: #090808; /* Dark gray background */
-  color: #D4AF37; /* White text */
+  background-color: #090808; 
+  color: #D4AF37; 
   text-align: center;
-  position: relative; /* Allow positioning adjustments */
+  position: relative; 
 }
 
 #contact h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffffff; /* Primary gold */
+  color: #ffffff;
 }
 
 #contact p {
   font-size: 1.2rem;
-  color: #ffffff; /* Secondary gold */
+  color: #ffffff; 
   margin-bottom: 2rem;
 }
 
 .contact-info {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center align the items */
-  gap: 0.6rem; /* Space between each contact item */
+  flex-direction: column; 
+  align-items: center; 
+  gap: 0.6rem; 
   margin-top: 2rem;
 }
 .contact-item {
   display: flex;
-  align-items: center; /* Align items vertically */
-  font-size: 1.8rem; /* Adjust font size */
-  gap: 0.4rem; /* Space between icon and text */
-  color: #D4AF37; /* Light beige for both icons and text */
+  align-items: center; 
+  font-size: 1.8rem; 
+  gap: 0.4rem; 
+  color: #D4AF37; 
 }
 
 .contact-item i {
-  font-size: 1.2rem; /* Match icon size with text */
-  color: #D4AF37; /* Gold color for icons */
+  font-size: 1.2rem; 
+  color: #D4AF37; 
   position: relative;
-  top: -1rem; /* Move icon slightly upward */
+  top: -1rem; 
 }
 
 .contact-item span {
-  font-size: 2.6rem; /* Match text size with icon */
-  color: #F3F4F6; /* Light beige color for text */
-  line-height: 1; /* Prevent excess spacing around the text */
+  font-size: 2.6rem; 
+  color: #F3F4F6; 
+  line-height: 1; 
 }
 
 .contact-item i:hover {
-  color: #D4AF37; /* Change color on hover */
+  color: #D4AF37; 
 }
 
 
@@ -405,36 +439,36 @@ body {
 .contact-logo {
   position: absolute;
   right: 20px;
-  top: 20px; /* Default positioning */
+  top: 20px; 
 }
 
 .logo-img {
-  width: 100%; /* Adjust logo size */
+  width: 100%; 
   height: 100%;
 }
 
 /* Responsive Design for 1440px and Smaller Screens */
 @media (max-width: 1440px) {
   .contact-logo {
-    position: static; /* Reset positioning */
-    margin-top: 2rem; /* Add space above the logo */
-    margin-bottom: 1rem; /* Add space below the logo */
+    position: static; 
+    margin-top: 2rem; 
+    margin-bottom: 1rem; 
   }
 
   .logo-img {
-    max-width: 200px; /* Adjust logo size for large screens */
-    margin: 0 auto; /* Center the logo */
+    max-width: 200px; 
+    margin: 0 auto; 
   }
 
   .contact-info {
-    gap: 1rem; /* Increase spacing for better readability */
+    gap: 1rem; 
   }
 }
 
 /* Responsive Design for Medium Screens (Tablets) */
 @media (max-width: 1024px) {
   .contact-info {
-    gap: 1.2rem; /* Adjust spacing for medium screens */
+    gap: 1.2rem; 
   }
 
   .contact-logo {
@@ -443,8 +477,8 @@ body {
   }
 
   .logo-img {
-    max-width: 180px; /* Scale down the logo for tablets */
-    margin: 0 auto; /* Center the logo */
+    max-width: 180px; 
+    margin: 0 auto; 
   }
 }
 
@@ -456,7 +490,7 @@ body {
   }
 
   .contact-info {
-    gap: 1.5rem; /* Adjust spacing for smaller screens */
+    gap: 1.5rem; 
   }
 
   .contact-logo {
@@ -467,40 +501,40 @@ body {
 
   .logo-img {
     background-color: #000000;
-    max-width: 150px; /* Scale down the logo for small screens */
-    margin: 0 auto; /* Center the logo */
+    max-width: 150px; 
+    margin: 0 auto; 
   }
 
 /* Adjust logo position for larger screens */
 @media screen and (min-width: 1441px) {
   .contact-logo {
-    right: 90px; /* Add more space to the right */
+    right: 90px; 
   }
 }
 }
 
 /* Footer Section */
 .footer {
-  background-color: #000000; /* Dark gray background */
-  color: #ffffff; /* White text */
+  background-color: #000000; 
+  color: #ffffff; 
   padding: 10px 0;
   text-align: center;
   font-size: 14px;
 }
 
 .footer-links a {
-  color: #ededed; /* Primary gold */
+  color: #ededed; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #C9A227; /* Secondary gold */
+  color: #C9A227; 
 }
 
 /* About Us Section */
 .about-us-container {
-  font-family: 'Zain', sans-serif; /* Apply Zain font */
+  font-family: 'Zain', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
