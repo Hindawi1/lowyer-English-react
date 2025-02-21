@@ -1,0 +1,555 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import the new font */
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+/* General Body Styles */
+body {
+  font-family: 'Zain', sans-serif; /* Apply Zain font */
+  background-color: #e9e9e9; /* Dark background */
+  color: #D4AF37; /* Primary gold text */
+  padding-top: 4rem;
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+  background-attachment: fixed; 
+}
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e9e9e9; /* Light beige background */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Center navbar items on normal screens */
+  align-items: center;
+}
+
+/* Navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #3C4043; /* Dark gray text */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #000000; /* Primary gold on hover */
+}
+
+.consult-btn {
+  background-color: #3C4043; /* Dark gray button */
+  color: #FFFFFF; /* White text */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.consult-btn:hover {
+  background-color: #e1c772; /* Primary gold on hover */
+}
+
+/* Burger menu styles */
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 21px;
+  justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+  right: 1rem; /* Align to the right on small screens */
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: #3C4043;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust to place below navbar */
+    left: 0;
+    width: 100%;
+    background-color: #e9e9e9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
+}
+
+
+/* Hero Section */
+
+.hero {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  background-image: url('./assets/images/heroBackground.png'); /* Ensure this path is correct */
+  background-size: 100% 100%; /* Stretch to cover both width and height */
+  background-position: center center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents repeating of the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+.hero::before {
+  content: ''; /* Empty content to create a new layer */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adding a semi-transparent dark layer */
+  z-index: 1; /* Make sure it's behind the text */
+}
+
+.hero-content {
+  color: #fff;
+  padding: 0 2rem;
+  text-align: center;
+  z-index: 2; /* Make sure the text is above the overlay */
+}
+
+.hero-title {
+  font-size: 4.8rem; 
+  margin-bottom: 0rem; 
+  font-weight: bold;
+  color: #e1c772; 
+}
+
+.hero-description {
+  font-size: 2.6rem; 
+  margin-top: 0; 
+  margin-bottom: 1.5rem; 
+  color: #fff; 
+}
+
+.hero-btn {
+  background-color: #e1c772cd; /* Primary gold button */
+  color: #fff; /* White text */
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #C9A227; /* Secondary gold on hover */
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust title size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph text for mobile */
+  }
+
+  .hero-btn {
+    font-size: 1.1rem; /* Adjust button size for mobile */
+  }
+}
+
+/* Services Section */
+/* خدماتنا */
+#services {
+  padding: 50px 0;
+  background-color: #090808;
+  text-align: center;
+}
+
+.services-header h2 {
+  font-size: 36px;
+  color: #D4AF37;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.service-box {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.service-box .service-icon {
+  font-size: 50px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 24px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.service-box:hover {
+  background-color: #333;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.service-box:hover .service-icon {
+  color: #f1c40f;
+}
+
+.service-box i {
+  font-size: 40px; 
+}
+
+#client-followup {
+  padding: 50px;
+  background-color: #090808;
+  color: #fff;
+}
+
+.followup-header h2 {
+  font-size: 36px;
+  color: #D4AF37;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.followup-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step-box {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step-box:hover {
+  background-color: #333;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.step-box:hover .service-icon {
+  color: #f1c40f;
+}
+
+
+.step-icon {
+  font-size: 50px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.step-box h3 {
+  font-size: 18px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.step-box p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .followup-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-box {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+
+/* Responsive for Mobile */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .followup-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-box {
+    width: 90%;
+  }
+}
+
+
+
+
+/* Contact Us Section */
+#contact {
+  padding: 3rem 1rem;
+  background-color: #090808; /* Dark gray background */
+  color: #D4AF37; /* White text */
+  text-align: center;
+  position: relative; /* Allow positioning adjustments */
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Primary gold */
+}
+
+#contact p {
+  font-size: 1.2rem;
+  color: #ffffff; /* Secondary gold */
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align the items */
+  gap: 0.6rem; /* Space between each contact item */
+  margin-top: 2rem;
+}
+.contact-item {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  font-size: 1.8rem; /* Adjust font size */
+  gap: 0.4rem; /* Space between icon and text */
+  color: #D4AF37; /* Light beige for both icons and text */
+}
+
+.contact-item i {
+  font-size: 1.2rem; /* Match icon size with text */
+  color: #D4AF37; /* Gold color for icons */
+  position: relative;
+  top: -1rem; /* Move icon slightly upward */
+}
+
+.contact-item span {
+  font-size: 2.6rem; /* Match text size with icon */
+  color: #F3F4F6; /* Light beige color for text */
+  line-height: 1; /* Prevent excess spacing around the text */
+}
+
+.contact-item i:hover {
+  color: #D4AF37; /* Change color on hover */
+}
+
+
+/* Logo */
+.contact-logo {
+  position: absolute;
+  right: 20px;
+  top: 20px; /* Default positioning */
+}
+
+.logo-img {
+  width: 100%; /* Adjust logo size */
+  height: 100%;
+}
+
+/* Responsive Design for 1440px and Smaller Screens */
+@media (max-width: 1440px) {
+  .contact-logo {
+    position: static; /* Reset positioning */
+    margin-top: 2rem; /* Add space above the logo */
+    margin-bottom: 1rem; /* Add space below the logo */
+  }
+
+  .logo-img {
+    max-width: 200px; /* Adjust logo size for large screens */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  .contact-info {
+    gap: 1rem; /* Increase spacing for better readability */
+  }
+}
+
+/* Responsive Design for Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .contact-info {
+    gap: 1.2rem; /* Adjust spacing for medium screens */
+  }
+
+  .contact-logo {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .logo-img {
+    max-width: 180px; /* Scale down the logo for tablets */
+    margin: 0 auto; /* Center the logo */
+  }
+}
+
+/* Responsive Design for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  #contact {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .contact-info {
+    gap: 1.5rem; /* Adjust spacing for smaller screens */
+  }
+
+  .contact-logo {
+    background-color: #060605;
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .logo-img {
+    background-color: #000000;
+    max-width: 150px; /* Scale down the logo for small screens */
+    margin: 0 auto; /* Center the logo */
+  }
+
+/* Adjust logo position for larger screens */
+@media screen and (min-width: 1441px) {
+  .contact-logo {
+    right: 90px; /* Add more space to the right */
+  }
+}
+}
+
+/* Footer Section */
+.footer {
+  background-color: #000000; /* Dark gray background */
+  color: #ffffff; /* White text */
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #ededed; /* Primary gold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #C9A227; /* Secondary gold */
+}
+
+/* About Us Section */
+.about-us-container {
+  font-family: 'Zain', sans-serif; /* Apply Zain font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header-section {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px;
+  background-color: #090808;
+}
+
+.text-container {
+  flex: 2; 
+  padding-left: 10px; 
+
+}
+
+.text-container .main-title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  background-color: rgba(54, 53, 53, 0.729); 
+  padding: 20px;
+  border-radius: 18px;
+  
+  border-color: #ffffff;
+  color: rgb(253, 251, 251);
+}
+
+.intro-text strong {
+  color: #f7bc10; 
+}
+
+.image-container {
+  flex: 1; 
+  padding-left: 30px; 
+}
+
+.image-container img {
+  padding-top: 20%;
+  width: 100%;  
+  height: auto;
+  border-radius: 8px; 
+}
