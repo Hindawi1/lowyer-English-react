@@ -1,4 +1,4 @@
-# lowyer-arabic-English-react
+# lowyer-English-react
 Lowyer website (frontend-backend)
 # Important Notice
 
