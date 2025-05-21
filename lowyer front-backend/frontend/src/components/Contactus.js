@@ -6,16 +6,16 @@ const ContactUs = () => {
     <section id="contact" className="contact-section">
       <div className="contact-content">
         {/* Hero-like Title and Description */}
-        <h1 className="contact-title">اتصل بنا</h1>
+        <h1 className="contact-title">Contact Us</h1>
         <p className="contact-description">
-      للحصول على استشارات قانونيةومهنية فورية!
+          For immediate legal and professional consultation!
         </p>
 
         {/* Contact Info */}
         <div className="contact-info">
           <div className="contact-item">
             <i className="fas fa-home"></i> {/* Home Icon */}
-            <p>المملكة العربية السعودية</p>
+            <p>Saudi Arabia</p>
           </div>
           <div className="contact-item">
             <i className="fas fa-phone-alt"></i> {/* Phone Icon */}

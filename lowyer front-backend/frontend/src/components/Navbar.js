@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png"; 
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,12 +34,13 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
-          <li><Link to="/" onClick={() => scrollToSection("hero")}>الرئيسية</Link></li>
-          <li><Link to="/" onClick={() => scrollToSection("about")}>من نحن</Link></li>
-          <li><Link to="/" onClick={() => scrollToSection("services")}>خدماتنا</Link></li>
-          <li><Link to="/" onClick={() => scrollToSection("contact")}>تواصل معنا</Link></li>
-          <li><Link to="/" className="consult-btn" onClick={() => scrollToSection("contact")}>اطلب استشارة فورية</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("hero")}>Home</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("about")}>About Us</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("services")}>Our Services</Link></li>
+          <li><Link to="/" onClick={() => scrollToSection("contact")}>Contact Us</Link></li>
+          <li><Link to="/" className="consult-btn" onClick={() => scrollToSection("contact")}>Request a Consultation</Link></li>
         </ul>
+
       </div>
     </nav>
   );

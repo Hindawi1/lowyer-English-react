@@ -11,10 +11,10 @@ const Hero = () => {
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">محمد بن عفيف</h1>
-        <p className="hero-description">للمحاماة والاستشارات القانونية.</p>
+        <h1 className="hero-title">Law Office</h1>
+        <p className="hero-description">Legal Services and Consultations</p>
         <button onClick={scrollToContact} className="hero-btn">
-          اطلب استشارة فورية
+          Request a Consultation
         </button>
       </div>
     </section>

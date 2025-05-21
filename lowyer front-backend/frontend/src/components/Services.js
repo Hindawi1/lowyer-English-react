@@ -4,71 +4,71 @@ import { FaRegAddressCard, FaTasks, FaClipboardCheck, FaGavel, FaBuilding, FaFil
 const Services = () => {
   return (
     <>
-      {/* قسم خدماتنا القانونية */}
+      {/* Legal Services Section */}
       <section id="services">
         <div className="services-header">
-          <h2>خدماتنا القانونية</h2>
+          <h2>Our Legal Services</h2>
         </div>
         <div className="services-grid">
-          {/* صناديق الخدمات مع الأيقونات */}
+          {/* Service boxes with icons */}
           <div className="service-box">
             <FaGavel className="service-icon" />
-            <h3>التحكيم</h3>
-            <p>توفير الوسائل البديلة لحل المنازعات مثل التحكيم والتسويات الودية.</p>
+            <h3>Arbitration</h3>
+            <p>Providing alternative dispute resolution methods such as arbitration and amicable settlements.</p>
           </div>
           <div className="service-box">
             <FaBuilding className="service-icon" />
-            <h3>قطاع الأعمال والشركات</h3>
-            <p>خدمات تأسيس الشركات، إعداد اللوائح، وتسجيل العلامات التجارية.</p>
+            <h3>Business & Corporate</h3>
+            <p>Company formation, drafting regulations, and trademark registration services.</p>
           </div>
           <div className="service-box">
             <FaFileSignature className="service-icon" />
-            <h3>العقود والاتفاقيات</h3>
-            <p>إعداد ومراجعة العقود لضمان الحقوق وتحقيق الشفافية.</p>
+            <h3>Contracts & Agreements</h3>
+            <p>Drafting and reviewing contracts to ensure rights and transparency.</p>
           </div>
           <div className="service-box">
             <FaBalanceScale className="service-icon" />
-            <h3>الاستشارات القانونية</h3>
-            <p>تقديم استشارات قانونية متخصصة في مختلف المجالات القانونية.</p>
+            <h3>Legal Consultation</h3>
+            <p>Providing specialized legal advice across various legal fields.</p>
           </div>
           <div className="service-box">
             <FaHandshake className="service-icon" />
-            <h3>التقاضي والدفاع</h3>
-            <p>تمثيل العملاء في المحاكم والدفاع عن حقوقهم القانونية.</p>
+            <h3>Litigation & Defense</h3>
+            <p>Representing clients in court and defending their legal rights.</p>
           </div>
         </div>
       </section>
 
-      {/* قسم المتابعة مع العميل */}
+      {/* Client Follow-up Section */}
       <section id="client-followup">
         <div className="followup-header">
-          <h2>المتابعة مع العميل</h2>
+          <h2>Client Follow-up</h2>
         </div>
         <div className="followup-steps">
           <div className="step-box">
             <FaRegAddressCard className="step-icon" />
-            <h3>استقبال الطلب</h3>
-            <p>جمع معلومات العميل وتفاصيل القضية.</p>
+            <h3>Request Reception</h3>
+            <p>Collecting client information and case details.</p>
           </div>
           <div className="step-box">
             <FaTasks className="step-icon" />
-            <h3>تحليل الطلب</h3>
-            <p>دراسة القضية ووضع خطة العمل القانونية.</p>
+            <h3>Request Analysis</h3>
+            <p>Studying the case and establishing the legal action plan.</p>
           </div>
           <div className="step-box">
             <FaClipboardCheck className="step-icon" />
-            <h3>التنفيذ والمتابعة</h3>
-            <p>تنفيذ الإجراءات القانونية وتقديم المتابعة المنتظمة مع العميل.</p>
+            <h3>Execution & Follow-up</h3>
+            <p>Implementing legal procedures and providing regular follow-up with the client.</p>
           </div>
           <div className="step-box">
             <FaFileInvoice className="step-icon" />
-            <h3>إغلاق القضية</h3>
-            <p>استكمال جميع الإجراءات القانونية وإصدار التقارير النهائية.</p>
+            <h3>Case Closure</h3>
+            <p>Completing all legal procedures and issuing final reports.</p>
           </div>
           <div className="step-box">
             <FaComments className="step-icon" />
-            <h3>التقييم والتغذية الراجعة</h3>
-            <p>الحصول على آراء العملاء لتحسين جودة الخدمات المستقبلية.</p>
+            <h3>Evaluation & Feedback</h3>
+            <p>Gathering client feedback to enhance future service quality.</p>
           </div>
         </div>
       </section>
